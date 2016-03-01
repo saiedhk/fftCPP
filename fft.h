@@ -6,8 +6,8 @@
    Date:   Nov 2011
    URL: https://github.com/saiedhk/ComplexCPP
    
-   Copyright Notice: Free use of this library is permitted under the
-   guidelines and in accordance with the MIT License (MIT).
+   Copyright Notice: Free use of this library is permitted under
+   the guidelines and in accordance with the MIT License (MIT).
    http://opensource.org/licenses/MIT
 
 **********************************************************************/
