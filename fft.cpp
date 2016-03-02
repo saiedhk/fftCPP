@@ -4,10 +4,10 @@
    Language: C++ 2007	   
    Author: Saied H. Khayat
    Date:   Nov 2011
-   URL: https://github.com/saiedhk/ComplexCPP
+   URL: https://github.com/saiedhk/fftCPP
    
-   Copyright Notice: Free use of this library is permitted under the
-   guidelines and in accordance with the MIT License (MIT).
+   Copyright Notice: Free use of this library is permitted under
+   the guidelines and in accordance with the MIT License (MIT).
    http://opensource.org/licenses/MIT
 
 **********************************************************************/
@@ -19,29 +19,9 @@ namespace shk
 
 
 /**
-  Computes the bit-reversed version of an integer
-  @param index: an input integer; must be unsigned
-  @param width: the number of LSB bits in index to be included in reversion
-  @return bit-reversed version of index
-*/
-unsigned bit_reverse(unsigned index, int width)
-{
-    unsigned result=0;
-
-    for (int i=0; i<width; i++)
-    {
-        result <<= 1;
-        result |= (index & 0x00000001);
-        index >>= 1;
-    }
-    return result;
-}
-
-
-/**
   Computes FFT of an input array of complex numbers (recursive implementation)
-  @param in: an input array; must be of Complex type
-  @param out: an array holding the FFT result of the input array
+  @param in: an input array of Complex type
+  @param out: an array holding the FFT of the input array
   @param length: the length of input and output arrays; must be a power of two
 */
 void fft_recursive
@@ -125,8 +105,8 @@ void fft_recursive
 //-----------------------------------------------------------------------------
 /**
   Computes FFT of an input array of complex numbers (iterative implementation)
-  @param in: an input array; must be of Complex type
-  @param out: an array holding the FFT result of the input array
+  @param in: an input array of Complex type
+  @param out: an array holding the FFT of the input array
   @param length: the length of input and output arrays; must be a power of two
 */
 void fft_iterative
@@ -196,6 +176,27 @@ void fft_iterative
     delete [] WNk;
 
 } // end fft_iterative()
+
+
+
+/**
+  Computes the bit-reversed version of an integer
+  @param index: an input integer; must be unsigned
+  @param width: the number of LSB bits in index to be included in reversion
+  @return bit-reversed version of index
+*/
+unsigned bit_reverse(unsigned index, int width)
+{
+    unsigned result=0;
+
+    for (int i=0; i<width; i++)
+    {
+        result <<= 1;
+        result |= (index & 0x00000001);
+        index >>= 1;
+    }
+    return result;
+}
 
 
 } // namespace shk

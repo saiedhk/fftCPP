@@ -4,7 +4,7 @@
    Language: C++ 2007	   
    Author: Saied H. Khayat
    Date:   Nov 2011
-   URL: https://github.com/saiedhk/ComplexCPP
+   URL: https://github.com/saiedhk/fftCPP
    
    Copyright Notice: Free use of this library is permitted under
    the guidelines and in accordance with the MIT License (MIT).
